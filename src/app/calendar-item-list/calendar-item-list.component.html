@@ -1,0 +1,27 @@
+<section class="calendar-items-section">
+    <div class="calendar-items-container">
+        <div class="name-column">
+            <h1>What are the 24 days of Advent - calendar-item-list.component.html</h1>
+            <div class="calendar-items">
+                <div *ngFor="let item of calendarItems">
+                    <app-calendar-item-card *ngIf="item.amount >= 0" 
+                        [item] = 'item' (cardClick) ="onCardClicked(item)"
+                        (xButtonClick) = "onDelete(item)"
+                        style="display:block; margin-bottom:0px;"></app-calendar-item-card>
+                </div>
+            </div>
+        </div>
+        
+        <div class="descriptions-column">
+            <h1>What happens during the Advent Season? - calendar-item-list.component.html</h1>
+            <div class="calendar-items">
+                <div *ngFor = "let item of calendarItems">
+                    <app-calendar-item-card *ngIf = "item.amount < 0"
+                    [item] = "item" (xButtonClick) = "onDelete(item)"
+                    (cardClick) = "onCardClicked(item)"
+                    style="display:block; margin-bottom: 0px;"></app-calendar-item-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

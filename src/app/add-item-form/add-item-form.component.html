@@ -1,0 +1,29 @@
+<!-- Start: Use these steps for Sign Up Forms (ex. for services) -->
+<form #itemForm="ngForm" (ngSubmit) = "onSubmit(itemForm)">
+    <!-- Continue: Use these steps for Sign Up Forms (ex. for services) -->
+    
+        <!-- Add Fields for Form-->
+        <div class="field is-horizontal">
+            <div class="field-body">
+                <div class="field is-narrow">
+                    <p class="control">
+                        <!----------------------------------------------------------------------------------------- Add to end of line 11 below ----->
+                        <input type="text" class="input" name="amount" placeholder=" Days to Advent" style="width: 100px;"[ngModel] = 'item.amount' required>
+                        <!-- <input type="text" class="input" name="amount" placeholder="amount" style="width: 100px;"[ngModel] = 'item.amount' required> -->
+                    </p>
+                </div>
+    
+                <div class="field">
+                    <p class="control">
+                        <!--------------------------------------------------------------------------- Add to end of line 18 below ---------->
+                        <input type="text" class="input" name="description" placeholder="        What is Advent?"[ngModel] ='item.description' required>
+                    </p>
+                </div>
+    
+                <div class="field is-narrow">
+                    <button class="button is-primary" type="submit"> ** Advent Calendar Calculator ** </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
